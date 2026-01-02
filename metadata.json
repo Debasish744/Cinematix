@@ -2,6 +2,7 @@
   "name": "Cinematix: AI Video Prompt & Image Studio",
   "description": "A high-end production suite for generating precision video prompts for tools like Sora and Runway, featuring a built-in AI image editor for visual reference creation.",
   "requestFramePermissions": [
-    "camera"
+    "camera",
+    "microphone"
   ]
 }

@@ -2,7 +2,8 @@
 export enum ToolPreset {
   RUNWAY = 'runway',
   PIKA = 'pika',
-  SORA = 'sora'
+  SORA = 'sora',
+  VEO = 'veo'
 }
 
 export enum StylePreset {
@@ -31,9 +32,17 @@ export interface PromptResult {
   breakdown: SceneBreakdown[];
   createdAt: number;
   tool: ToolPreset;
-  // 4C Model components for UI display
   cameraAnalysis?: string;
   characterAnalysis?: string;
   contextAnalysis?: string;
   cinematicAnalysis?: string;
 }
+
+export interface ChatMessage {
+  role: 'user' | 'model';
+  text: string;
+  isTranscription?: boolean;
+}
+
+export type ImageSize = '1K' | '2K' | '4K';
+export type AspectRatio = '1:1' | '2:3' | '3:2' | '3:4' | '4:3' | '9:16' | '16:9' | '21:9';
